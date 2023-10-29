@@ -54,12 +54,12 @@ namespace ConsoleApp2
 
         static string DecodeMorse(string morseCode)
         {
-            string[] words = morseCode.Split(new[] { " / " }, StringSplitOptions.None); // Разделение на слова
+            string[] words = morseCode.Split(new[] { " / " }, StringSplitOptions.None);
             string result = "";
 
             foreach (string word in words)
             {
-                string[] letters = word.Split(' '); // Разделение на буквы
+                string[] letters = word.Split(' ');
 
                 foreach (string letter in letters)
                     if (morseToLetter.ContainsKey(letter))
